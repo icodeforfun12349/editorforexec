@@ -11,16 +11,16 @@
     /* --- Theme 1 (Default) Styles --- */
     html,
     body {
-      /* PrimaryBackground: Dark Blue/Black */
-      background: #050508;
+      /* PrimaryBackground (Dark Blue) */
+      background: #0b0f1a;
       width: 100%;
       height: 100%;
       margin: 0;
       padding: 0;
       overflow: hidden;
-      font-family: "Inter", "Poppins", sans-serif;
-      /* Foreground */
-      color: #d0d0d0;
+      font-family: consolas, "poppins", monospace;
+      /* Foreground (Slate 500) */
+      color: #64748b;
       display: flex;
       flex-direction: column;
       transition: background-color 0.2s ease, color 0.2s ease;
@@ -59,7 +59,7 @@
     }
 
     .controls button svg {
-      fill: #dddddd;
+      fill: #94a3b8;
       transition: fill 0.2s ease;
       width: 22px;
       height: 22px;
@@ -70,7 +70,7 @@
     }
 
     .controls button svg:hover {
-      fill: #999999;
+      fill: #f8fafc;
       transition: fill 0.2s ease;
     }
 
@@ -196,8 +196,8 @@
     }
 
     #tab-bar {
-      /* CardGradient: Deeper Blue Gradient */
-      background: linear-gradient(to bottom, #0a0b14 0%, #050508 100%);
+      /* CardGradient (Blue-ish) */
+      background: linear-gradient(to bottom, #121826 0%, #0d121f 100%);
       height: 40px;
       min-height: 40px;
       max-height: 40px;
@@ -211,8 +211,8 @@
       overflow-x: auto;
       overflow-y: hidden;
       scrollbar-width: none;
-      /* Border: Subtle Blue */
-      border-bottom: 1px solid #1a1b26;
+      /* Border (Slate 800-ish) */
+      border-bottom: 1px solid #1e293b;
       transition: background 0.2s ease, border-bottom 0.2s ease;
     }
 
@@ -251,26 +251,25 @@
     }
 
     .tab svg path {
-      /* Foreground */
-      stroke: #686868;
-      /* Slightly darker than main foreground */
+      /* Foreground Stroke */
+      stroke: #475569;
       transition: stroke 0.2s ease;
     }
 
     .tab.active svg path {
-      /* Lighter foreground for active */
-      stroke: #b4b4b4;
+      /* Light stroke for active */
+      stroke: #f8fafc;
     }
 
     .tab.active {
-      /* PrimaryBackground */
-      background: #0a0b14;
-      /* Lighter foreground for active */
-      color: #ffffff;
+      /* PrimaryBackground (Dark Blue) */
+      background: #0b0f1a;
+      /* Lighter foreground for active (Slate 50) */
+      color: #f8fafc;
       z-index: 1;
-      box-shadow: 0 0px 8px rgba(32, 128, 255, 0.2);
-      /* Border: Cyan/Blue Accent */
-      border: 1px solid #2080ff;
+      box-shadow: 0 0px 0px rgba(0, 0, 0, 0.3);
+      /* Border (Slate 800) */
+      border: 1px solid #1e293b;
     }
 
     .tab-close {
@@ -316,7 +315,7 @@
       align-items: center;
       justify-content: center;
       /* Foreground */
-      color: #767676;
+      color: #64748b;
       cursor: pointer;
       transition: 0.2s;
       font-size: 20px;
@@ -326,8 +325,8 @@
     }
 
     #new-tab-btn:hover {
-      /* Lighter foreground */
-      color: #b4b4b4;
+      /* Lightest foreground */
+      color: #f8fafc;
     }
 
     .context-menu {
@@ -343,7 +342,7 @@
 
     .menu-item {
       padding: 8px 12px;
-      color: #767676;
+      color: #94a3b8;
       cursor: pointer;
       border-radius: 4px;
       font-size: 13px;
@@ -352,8 +351,8 @@
     }
 
     .menu-item:hover {
-      background: #1f1f1f;
-      color: #65645f;
+      background: #1e293b;
+      color: #f8fafc;
     }
 
     @keyframes tabActivateAnimation {
@@ -582,10 +581,10 @@
       top: 0;
       height: 100vh;
       width: 220px;
-      /* PrimaryBackground */
-      background: #050508;
-      /* Border */
-      border-right: 1px solid #1a1b26;
+      /* PrimaryBackground (Dark Blue) */
+      background: #0b0f1a;
+      /* Border (Slate 800) */
+      border-right: 1px solid #1e293b;
       z-index: 2000;
       transform: translateX(-100%);
       transition: transform 0.3s cubic-bezier(0.33, 1, 0.68, 1), background-color 0.2s ease, border-right 0.2s ease;
@@ -603,8 +602,8 @@
     .sidebar-btn {
       background: transparent;
       border: none;
-      /* Foreground */
-      color: #767676;
+      /* Foreground (Slate 400ish) */
+      color: #94a3b8;
       display: flex;
       align-items: center;
       gap: 14px;
@@ -620,34 +619,34 @@
     }
 
     .sidebar-btn:hover {
-      /* ScondaryBackground */
-      background-color: #1A1821;
-      /* Lighter Foreground */
-      color: #b4b4b4;
+      /* Hover Background */
+      background-color: #1e293b;
+      /* Lightest Foreground */
+      color: #f8fafc;
     }
 
     .sidebar-btn:hover svg {
-      /* Lighter Foreground */
-      stroke: #b4b4b4;
+      /* Lightest Foreground */
+      stroke: #f8fafc;
     }
 
     .sidebar-btn.selected {
-      /* Border */
-      background-color: #332C40;
-      /* Lighter Foreground */
-      color: #b4b4b4;
+      /* Active selection border color background */
+      background-color: #1e293b;
+      /* Lightest Foreground */
+      color: #f8fafc;
     }
 
     .sidebar-btn.selected svg {
-      /* Lighter Foreground */
-      stroke: #b4b4b4;
+      /* Lightest Foreground */
+      stroke: #f8fafc;
     }
 
     .sidebar-btn svg {
       width: 20px;
       height: 20px;
-      /* Foreground */
-      stroke: #767676;
+      /* Foreground Stroke */
+      stroke: #475569;
       flex-shrink: 0;
       transition: stroke 0.2s ease;
     }
@@ -843,7 +842,7 @@
         tabCount++;
         this.number = tabCount;
         this.name = `Untitled Tab`;
-        this.content = "";
+        this.content = "Print("Hello, World!")";
         this.element = this.createTabElement();
       }
       createTabElement() {
@@ -1054,35 +1053,35 @@
           { token: "entity.name.function", foreground: "#767676" },
         ],
         colors: {
-          "editor.background": "#050508", // PrimaryBackground (Dark Blue/Black)
-          "editor.foreground": "#d0d0d0", // Foreground
-          "editorLineNumber.foreground": "#1a1b26", // Border
-          "editorLineNumber.activeForeground": "#2080ff", // Blue Accent
-          "editor.lineHighlightBackground": "#0a0b14", // SecondaryBackground
-          "editor.lineHighlightBorder": "#1a1b26", // Border
-          "editorIndentGuide.background": "#0a0b14", // SecondaryBackground
-          "editorIndentGuide.activeBackground": "#2080ff", // Blue Accent
-          "editorCursor.foreground": "#2080ff", // Blue Accent
-          "editor.selectionBackground": "#2080ff30", // Translucent Blue
-          "editor.selectionHighlightBackground": "#2080ff20",
-          "editor.wordHighlightBackground": "#2080ff18",
-          "editor.wordHighlightStrongBackground": "#2080ff25",
-          "editor.findMatchBackground": "#2080ff35",
-          "editor.findMatchHighlightBackground": "#2080ff20",
-          "editorSuggestWidget.background": "#0a0b14", // SecondaryBackground
-          "editorSuggestWidget.border": "#1a1b26", // Border
-          "editorSuggestWidget.foreground": "#d0d0d0", // Foreground
-          "editorSuggestWidget.selectedBackground": "#2080ff30", // Blue Accent
-          "editorSuggestWidget.highlightForeground": "#ffffff",
-          "editorBracketHighlight.foreground1": "#2080ff",
-          "editorBracketHighlight.foreground2": "#4ae3ff",
-          "editorBracketHighlight.foreground3": "#d0d0d0",
-          "editorGutter.background": "#050508", // PrimaryBackground
-          "scrollbarSlider.background": "#2080ff10",
-          "scrollbarSlider.hoverBackground": "#2080ff20",
-          "scrollbarSlider.activeBackground": "#2080ff30",
-          "minimap.background": "#050508", // PrimaryBackground
-          "minimap.selectionHighlight": "#2080ff40",
+          "editor.background": "#131219", // PrimaryBackground
+          "editor.foreground": "#767676", // Foreground
+          "editorLineNumber.foreground": "#332C40", // Border
+          "editorLineNumber.activeForeground": "#767676", // Foreground
+          "editor.lineHighlightBackground": "#1A1821", // SecondaryBackground
+          "editor.lineHighlightBorder": "#332C40", // Border
+          "editorIndentGuide.background": "#1A1821", // SecondaryBackground
+          "editorIndentGuide.activeBackground": "#332C40", // Border
+          "editorCursor.foreground": "#767676", // Foreground
+          "editor.selectionBackground": "#332C40", // Border
+          "editor.selectionHighlightBackground": "#332C40",
+          "editor.wordHighlightBackground": "#1A1821",
+          "editor.wordHighlightStrongBackground": "#1A1821",
+          "editor.findMatchBackground": "#332C40",
+          "editor.findMatchHighlightBackground": "#1A1821",
+          "editorSuggestWidget.background": "#1A1821", // SecondaryBackground
+          "editorSuggestWidget.border": "#332C40", // Border
+          "editorSuggestWidget.foreground": "#767676", // Foreground
+          "editorSuggestWidget.selectedBackground": "#332C40", // Border
+          "editorSuggestWidget.highlightForeground": "#b4b4b4",
+          "editorBracketHighlight.foreground1": "#767676",
+          "editorBracketHighlight.foreground2": "#767676",
+          "editorBracketHighlight.foreground3": "#767676",
+          "editorGutter.background": "#131219", // PrimaryBackground
+          "scrollbarSlider.background": "#1A1821", // SecondaryBackground
+          "scrollbarSlider.hoverBackground": "#332C40", // Border
+          "scrollbarSlider.activeBackground": "#332C40", // Border
+          "minimap.background": "#131219", // PrimaryBackground
+          "minimap.selectionHighlight": "#332C40",
         },
       });
 
@@ -1265,11 +1264,11 @@
 
         setTimeout(validateLuaCode, 500); // initial check
 
-        document
-          .getElementById("new-tab-btn")
-          .addEventListener("click", createNewTab);
-        createNewTab();
       });
+      document
+        .getElementById("new-tab-btn")
+        .addEventListener("click", createNewTab);
+      createNewTab();
       window.onresize = function () {
         editor.layout();
       };
