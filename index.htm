@@ -1154,14 +1154,14 @@ require(["vs/basic-languages/monaco.contribution"], function () {
 
           setTimeout(validateLuaCode, 500); // initial check
 
+          document
+            .getElementById("new-tab-btn")
+            .addEventListener("click", createNewTab);
+          createNewTab();
+          window.onresize = function () {
+            editor.layout();
+          };
         });
-        document
-          .getElementById("new-tab-btn")
-          .addEventListener("click", createNewTab);
-        createNewTab();
-        window.onresize = function () {
-          editor.layout();
-        };
         Cut = function () {
           editor.focus();
           document.execCommand("cut");
