@@ -1265,11 +1265,11 @@
 
         setTimeout(validateLuaCode, 500); // initial check
 
+        document
+          .getElementById("new-tab-btn")
+          .addEventListener("click", createNewTab);
+        createNewTab();
       });
-      document
-        .getElementById("new-tab-btn")
-        .addEventListener("click", createNewTab);
-      createNewTab();
       window.onresize = function () {
         editor.layout();
       };
